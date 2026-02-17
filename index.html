@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <!-- Placeholder для логотипа магазина -->
+                <span class="logo-text">Магазин</span>
+            </div>
+            <h1>Оформление заказа</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="checkout-grid">
+            <!-- Левая колонка: Детали оплаты и доставки -->
+            <div class="left-column">
+
+                <!-- Секция: Детали оплаты -->
+                <section class="checkout-section">
+                    <h2>Детали оплаты</h2>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="name">Имя *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="surname">Фамилия *</label>
+                            <input type="text" id="surname" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Страна/регион *</label>
+                        <div class="static-input">Россия</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Адрес *</label>
+                        <input type="text" id="address" placeholder="Номер дома и название улицы" class="mb-2" required>
+                        <input type="text" id="address2" placeholder="Крыло, подъезд, этаж и т.д. (необязательно)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Населенный пункт *</label>
+                        <input type="text" id="city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="region">Область / район *</label>
+                        <input type="text" id="region" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zip">Почтовый индекс *</label>
+                        <input type="text" id="zip" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                </section>
+
+                <!-- Секция: Тип доставки -->
+                <section class="checkout-section">
+                    <div class="section-header">
+                        <h2>Тип доставки</h2>
+                        <div class="city-selector">
+                            <span class="city-icon">📍</span>
+                            <span class="city-label">Мой город:</span>
+                            <a href="#" class="city-value">Москва</a>
+                        </div>
+                    </div>
+
+                    <div class="delivery-card active">
+                        <div class="delivery-info">
+                            <h3>Доставка на дом</h3>
+                            <p>Сроки уточнит менеджер при обработке заказа</p>
+                        </div>
+                        <a href="#" class="change-link">Изменить</a>
+                    </div>
+
+                    <div class="delivery-card">
+                        <div class="delivery-info">
+                            <h3>Самовывоз со склада</h3>
+                            <p>Бесплатно</p>
+                        </div>
+                        <!-- Можно добавить скрытую ссылку изменить если нужно для симметрии или пустоту -->
+                    </div>
+                </section>
+
+                <!-- Секция: Способ оплаты -->
+                <section class="checkout-section">
+                    <h2>Способ оплаты</h2>
+                    <div class="payment-methods">
+                        <div class="payment-card active">
+                            <div class="check-icon">✓</div>
+                            <div class="card-icon">💳</div>
+                            <div class="payment-text">
+                                <h3>Оплата онлайн</h3>
+                                <p class="small-text">Visa, Mastercard, МИР, СБП</p>
+                            </div>
+                        </div>
+                        <div class="payment-card">
+                            <div class="card-icon">💵</div>
+                            <div class="payment-text">
+                                <h3>При получении</h3>
+                                <p class="small-text">Наличными или картой</p>
+                            </div>
+                        </div>
+                        <div class="payment-card">
+                            <div class="card-icon">⏱️</div>
+                            <div class="payment-text">
+                                <h3>Оплата частями</h3>
+                                <p class="small-text">4 платежа без переплат</p>
+                            </div>
+                        </div>
+                        <div class="payment-card">
+                            <div class="card-icon">%</div>
+                            <div class="payment-text">
+                                <h3>Рассрочка</h3>
+                                <p class="small-text">0-0-24</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-note">
+                        <span class="icon-i">i</span> Оплата онлайн станет доступна после подтверждения заказа
+                    </div>
+                </section>
+
+                <!-- Секция: Промокод -->
+                <section class="checkout-section">
+                    <div class="section-header">
+                        <h2>Промокод или сертификат <span class="icon-i">i</span></h2>
+                    </div>
+                    <input type="text" class="dashed-input" placeholder="Промокод или сертификат">
+                </section>
+
+                <section class="checkout-section">
+                    <div class="form-group">
+                        <label for="notes">Примечание к заказу (необязательно)</label>
+                        <textarea id="notes" rows="4"
+                            placeholder="Примечания к вашему заказу, например, особые пожелания отделу доставки."></textarea>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Правая колонка: Ваш заказ -->
+            <div class="right-column">
+                <div class="order-summary-card">
+                    <div class="summary-header">
+                        <h3>Ваш заказ</h3>
+                    </div>
+
+                    <!-- Таблица заказа -->
+                    <div class="order-table">
+                        <div class="table-header">
+                            <span>Товар</span>
+                            <span>Подытог</span>
+                        </div>
+                        <div class="table-row">
+                            <span>Камера с сим картой × 1</span>
+                            <span>4 990 ₽</span>
+                        </div>
+                        <div class="table-row subtotal">
+                            <span>Подытог</span>
+                            <span>4 990 ₽</span>
+                        </div>
+                        <div class="table-row">
+                            <span>Доставка</span>
+                            <span>Оплатить при получении</span>
+                        </div>
+                        <div class="table-row total">
+                            <span>Итого</span>
+                            <span>4 990 ₽</span>
+                        </div>
+                    </div>
+
+
+
+                    <button class="submit-btn mt-20">Подтвердить заказ</button>
+
+                    <p class="disclaimer mt-20">
+                        Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с
+                        сайтом и для других целей, описанных в нашей <a href="#">политика конфиденциальности</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
